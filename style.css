@@ -1,64 +1,81 @@
-.container {
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem; /* Espace entre les sections */
+.calculator {
+    width: 360px;
+    max-width: 100%;
 }
 
-.row0 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem; 
+.calculator-display {
+    width: 100%;
+    max-width: 360px; /* Limite la largeur */
 }
 
-.text {
-    padding: 50px;
-    color: white;
+#display {
+    height: 150px; /* Hauteur de la zone */
+    font-size: 2rem; /* Taille du texte */
+    padding: 10px; /* Espacement interne */
+    border-radius: 10px; /* Coins arrondis */
+    background-color: #3d3d3f;
+    box-shadow: 0 3px 0 #000; /* Ombre */
+}
+
+/* Boutons généraux */
+.btn {
+    border-radius: 50px;
+    height: 80px;
     font-size: 1.5rem;
-}
-
-.Allbutton {
-    background-color: black;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 1rem; /* Espace entre les sections */
-}
-
-.buttonChiffre {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 0.5rem; 
-    max-width: 300px; 
+    transition: transform 0.2s ease, background-color 0.2s ease; /* Animation fluide */
+    margin: 5px; /* Espacement entre les boutons */
+    box-shadow: 0 3px 0 #000; /* Ombre */
 }
 
-.buttonChiffre button {
-    background-color: #2a2a2c;
-    border-color: #2a2a2c;
-    width: 60px;
-    border-radius: 8px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    transition: all 0.2s ease-in-out;
+/* Effet hover */
+.btn:hover {
+    transform: scale(1.1); /* Zoom à 110% */
 }
 
-.buttonChiffre button:hover {
-    transform: scale(1.1);
-    background-color: #0056b3; 
+/* Boutons pour les calculs */
+.btn-warning {
+    background-color: #ff9f0a; /* Couleur par défaut */
+    border: none;
     color: #fff;
 }
 
-#buttonOperation {
-    background-color: #0056b3;
+.btn-warning:hover {
+    background-color: #fca949; /* Couleur au survol */
 }
 
-.buttonOperation button {
+.btn-warning:active {
+    background-color: #fbc78d; /* Couleur lorsqu'on appuie */
 }
 
-.buttonOperation button:hover {
-    background-color: #5a6268;
+/* Boutons des chiffres et de la virgule */
+.btn-secondary {
+    background-color: #2a2a2c; /* Couleur par défaut */
+    border: none;
     color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #474444; /* Couleur au survol */
+}
+
+.btn-secondary:active {
+    background-color: #727272; /* Couleur lorsqu'on appuie */
+}
+
+/* Autres boutons */
+.btn-dark {
+    background-color: #5c5b60; /* Couleur par défaut */
+    border: none;
+    color: #fff;
+}
+
+.btn-dark:hover {
+    background-color: #615c5c; /* Couleur au survol */
+}
+
+.btn-dark:active {
+    background-color: #8c8c8c; /* Couleur lorsqu'on appuie */
 }
