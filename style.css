@@ -1,6 +1,22 @@
-p{
-    text-align: center;
+.allButton{
+    width: 100%;
+    height: 40px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 16px;
 }
-h1{
-    text-align: center;
+
+.buttonChiffre .btn-primary {
+    background-color: #2a2a2c; /* Remplace la couleur de fond */   
+   border-color: #2a2a2c; /* Remplace la couleur de la bordure */
+    color: #D4D4D2; /* Remplace la couleur du texte */
+}
+
+.buttonChiffre .btn-primary:hover {
+    background-color: #474444; /* Couleur au survol */
+    border-color: #474444;
 }

@@ -5,17 +5,37 @@
         <title>Calculator</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src = "app.js"></script>
     </head>
     <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src = "app.js"></script>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 offset-md-4 form-div">
-                <form action="index.html" method="post">
-                    <h3 class="text-center">Calculator</h3>
-                    <div class="form-group">
-                        <input type="text" name="number1" class="form-control number1" placeholder="Number 1">
-                    </div>
+        <div class="Allbutton">
+            <div class="buttonChiffre">
+                <button class="btn btn-primary" onclick="add()">0</button>
+                <br>
+                <button class="btn btn-primary" onclick="add()">1</button>
+                <button class="btn btn-primary" onclick="add()">2</button>
+                <button class="btn btn-primary" onclick="add()">3</button>
+                <br>
+                <button class="btn btn-primary" onclick="add()">4</button>
+                <button class="btn btn-primary" onclick="add()">5</button>
+                <button class="btn btn-primary" onclick="add()">6</button>
+                <br>
+                <button class="btn btn-primary" onclick="add()">7</button>
+                <button class="btn btn-primary" onclick="add()">8</button>
+                <button class="btn btn-primary" onclick="add()">9</button>
+            </div>
+                <div class="buttonOperation">
+                    <button class="btn btn-primary" onclick="add('+')">+</button>
+                    <button class="btn btn-primary" onclick="add('-')">-</button>
+                    <button class="btn btn-primary" onclick="add('*')">x</button>
+                    <button class="btn btn-primary" onclick="add('/')">/</button>
+                <div>
+                    <button class="btn btn-primary" onclick="add('.')">.</button>
+                    <button class="btn btn-primary" onclick="clear()">C</button>
+                    <button class="btn btn-primary" onclick="calculate()">=</button>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
