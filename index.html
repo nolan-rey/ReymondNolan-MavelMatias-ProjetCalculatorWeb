@@ -9,32 +9,40 @@
     <script src = "app.js"></script>
     </head>
     <body>
+        <div class="container">
+            <div class="row0">
+                <h1 class="text">Calculator</h1>
+            </div>
+        </div>
         <div class="Allbutton">
             <div class="buttonChiffre">
-                <button class="btn btn-primary" onclick="add()">0</button>
-                <br>
-                <button class="btn btn-primary" onclick="add()">1</button>
-                <button class="btn btn-primary" onclick="add()">2</button>
-                <button class="btn btn-primary" onclick="add()">3</button>
-                <br>
-                <button class="btn btn-primary" onclick="add()">4</button>
-                <button class="btn btn-primary" onclick="add()">5</button>
-                <button class="btn btn-primary" onclick="add()">6</button>
-                <br>
-                <button class="btn btn-primary" onclick="add()">7</button>
-                <button class="btn btn-primary" onclick="add()">8</button>
-                <button class="btn btn-primary" onclick="add()">9</button>
-            </div>
-                <div class="buttonOperation">
-                    <button class="btn btn-primary" onclick="add('+')">+</button>
-                    <button class="btn btn-primary" onclick="add('-')">-</button>
-                    <button class="btn btn-primary" onclick="add('*')">x</button>
-                    <button class="btn btn-primary" onclick="add('/')">/</button>
-                <div>
-                    <button class="btn btn-primary" onclick="add('.')">.</button>
-                    <button class="btn btn-primary" onclick="clear()">C</button>
-                    <button class="btn btn-primary" onclick="calculate()">=</button>
+                <div class="row1">
+                    <button class="btn btn-primary" onclick="add(9)">9</button>
+                    <button class="btn btn-primary" onclick="add(8)">8</button>
+                    <button class="btn btn-primary" onclick="add(7)">7</button>
+                    <button id="buttonOperation" class="btn btn-secondary" onclick="add('*')">×</button>
                 </div>
+                <div class="row2">
+                    <button class="btn btn-primary" onclick="add(6)">6</button>
+                    <button class="btn btn-primary" onclick="add(5)">5</button>
+                    <button class="btn btn-primary" onclick="add(4)">4</button>
+                    <button id="buttonOperation" class="btn btn-secondary" onclick="add('-')">-</button>
+                </div>
+                <div class="row3">
+                    <button class="btn btn-primary" onclick="add(3)">3</button>
+                    <button class="btn btn-primary" onclick="add(2)">2</button>
+                    <button class="btn btn-primary" onclick="add(1)">1</button>
+                    <button id="buttonOperation" class="btn btn-secondary" onclick="add('+')">+</button>
+                </div>
+                <div class="row4">
+                    <button class="btn btn-primary" onclick="add('.')">.</button>
+                    <button class="btn btn-primary" onclick="add(0)">0</button>
+                    <button class="btn btn-primary" onclick="clear()">C</button>
+                    <button id="buttonOperation" class="btn btn-secondary" onclick="calculate()">=</button>
+                </div>
+            </div>
+            <div class="buttonOperation">
+                <button class="btn btn-secondary" onclick="add('/')">÷</button>
             </div>
         </div>
     </body>

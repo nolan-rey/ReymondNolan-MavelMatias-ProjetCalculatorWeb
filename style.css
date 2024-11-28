@@ -1,22 +1,64 @@
-.allButton{
-    width: 100%;
-    height: 40px;
-    background-color: #f1f1f1;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-    margin-bottom: 10px;
-    font-size: 16px;
+.container {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; /* Espace entre les sections */
 }
 
-.buttonChiffre .btn-primary {
-    background-color: #2a2a2c; /* Remplace la couleur de fond */   
-   border-color: #2a2a2c; /* Remplace la couleur de la bordure */
-    color: #D4D4D2; /* Remplace la couleur du texte */
+.row0 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem; 
 }
 
-.buttonChiffre .btn-primary:hover {
-    background-color: #474444; /* Couleur au survol */
-    border-color: #474444;
+.text {
+    padding: 50px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.Allbutton {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; /* Espace entre les sections */
+}
+
+.buttonChiffre {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem; 
+    max-width: 300px; 
+}
+
+.buttonChiffre button {
+    background-color: #2a2a2c;
+    border-color: #2a2a2c;
+    width: 60px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+.buttonChiffre button:hover {
+    transform: scale(1.1);
+    background-color: #0056b3; 
+    color: #fff;
+}
+
+#buttonOperation {
+    background-color: #0056b3;
+}
+
+.buttonOperation button {
+}
+
+.buttonOperation button:hover {
+    background-color: #5a6268;
+    color: #fff;
 }
