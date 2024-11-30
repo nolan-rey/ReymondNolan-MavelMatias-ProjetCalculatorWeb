@@ -1,45 +1,130 @@
+/* Conteneur principal de la calculatrice */
 .calculator {
-    width: 360px;
-    max-width: 100%;
+    width: 360px; /* Largeur maximale */
+    max-width: 100%; /* S'adapte aux petits écrans */
 }
 
+/* Zone d'affichage */
 .calculator-display {
-    width: 100%;
+    width: 100%; /* Prend toute la largeur du conteneur */
     max-width: 360px; /* Limite la largeur */
 }
 
+/* Style pour l'écran d'affichage */
 #display {
-    height: 150px; /* Hauteur de la zone */
+    height: 150px; /* Hauteur de la zone d'affichage */
     font-size: 2rem; /* Taille du texte */
-    padding: 10px; /* Espacement interne */
+    padding: 10px; /* Marges internes */
     border-radius: 10px; /* Coins arrondis */
-    background-color: #3d3d3f;
-    box-shadow: 0 3px 0 #000; /* Ombre */
+    background-color: #3d3d3f; /* Couleur sombre */
+    box-shadow: 0 3px 0 #000; /* Ombre sous l'écran */
+}
+
+/* Bouton pour ouvrir la barre latérale */
+#toggle-history {
+    position: absolute; /* Fixe par rapport au parent */
+    top: 10px; /* Alignement vertical */
+    right: 10px; /* Alignement horizontal */
+    width: 40px; /* Taille du bouton */
+    height: 40px; /* Hauteur du bouton */
+    border-radius: 50%; /* Forme ronde */
+    font-size: 1.5rem; /* Taille de l'icône */
+    z-index: 10; /* Priorité visuelle */
+    background-color: #5c5b60; /* Couleur initiale */
+    transition: background-color 0.2s ease; /* Animation au survol */
+}
+
+#toggle-history:hover {
+    background-color: #615c5c; /* Couleur au survol */
+    cursor: pointer; /* Pointeur interactif */
+}
+
+/* Barre latérale (historique) */
+.history-sidebar {
+    position: absolute; /* Relative à la calculatrice */
+    top: 0; /* Aligne avec le haut de la calculatrice */
+    right: -300px; /* Cachée par défaut */
+    width: 300px; /* Largeur de la barre */
+    height: 100%; /* Hauteur égale à celle de la calculatrice */
+    background-color: #2a2a2c; /* Fond sombre */
+    color: white; /* Texte en blanc */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Ombre pour effet de profondeur */
+    transition: right 0.3s ease-in-out; /* Animation lors de l'ouverture */
+    z-index: 1000; /* Priorité visuelle */
+    padding-top: 20px; /* Espace pour le contenu */
+    overflow: hidden; /* Pas de débordement */
+}
+
+.history-sidebar.active {
+    right: 0; /* Position visible lorsqu'active */
+}
+
+/* Contenu de l'historique */
+.history-sidebar h5 {
+    font-size: 1.5rem; /* Taille du titre */
+    margin: 20px 0; /* Espacement vertical */
+    text-align: center; /* Centré */
+    color: #ff9f0a; /* Couleur orange pour le titre */
+}
+
+.history-sidebar #history-list {
+    font-size: 1rem; /* Taille du texte */
+    line-height: 1.5; /* Espacement des lignes */
+    margin: 0 10px; /* Marges internes */
+    padding: 10px; /* Espacement autour du contenu */
+    background-color: #3d3d3f; /* Couleur de fond */
+    border-radius: 8px; /* Coins arrondis */
+    max-height: calc(100% - 100px); /* Limite la hauteur (scrolle si nécessaire) */
+    overflow-y: auto; /* Active le défilement vertical */
+    color: white; /* Texte blanc */
+}
+
+/* Bouton pour fermer la barre latérale */
+#close-history {
+    background-color: #5c5b60; /* Couleur par défaut */
+    border: none; /* Sans bordure */
+    width: 40px; /* Largeur */
+    height: 40px; /* Hauteur */
+    border-radius: 50%; /* Rond */
+    display: flex; /* Centre le contenu */
+    align-items: center; 
+    justify-content: center;
+    font-size: 1.2rem; /* Taille du texte */
+    position: absolute; /* Position absolue */
+    top: 10px; /* Distance depuis le haut */
+    right: 10px; /* Distance depuis la droite */
+    color: white; /* Texte blanc */
+    transition: background-color 0.2s ease; /* Animation */
+}
+
+#close-history:hover {
+    background-color: #615c5c; /* Couleur au survol */
+    cursor: pointer; /* Pointeur interactif */
 }
 
 /* Boutons généraux */
 .btn {
-    border-radius: 50px;
-    height: 80px;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
+    border-radius: 50px; /* Coins arrondis */
+    height: 80px; /* Hauteur standard */
+    font-size: 1.5rem; /* Taille du texte */
+    display: flex; /* Centre le contenu */
+    align-items: center; 
     justify-content: center;
-    transition: transform 0.2s ease, background-color 0.2s ease; /* Animation fluide */
-    margin: 5px; /* Espacement entre les boutons */
-    box-shadow: 0 3px 0 #000; /* Ombre */
+    transition: transform 0.2s ease, background-color 0.2s ease; /* Effet fluide */
+    margin: 5px; /* Espace entre les boutons */
+    box-shadow: 0 3px 0 #000; /* Ombre sous les boutons */
 }
 
-/* Effet hover */
+/* Effet hover (survol) pour tous les boutons */
 .btn:hover {
-    transform: scale(1.1); /* Zoom à 110% */
+    transform: scale(1.1); /* Agrandit légèrement */
 }
 
-/* Boutons pour les calculs */
+/* Boutons pour les opérations */
 .btn-warning {
-    background-color: #ff9f0a; /* Couleur par défaut */
-    border: none;
-    color: #fff;
+    background-color: #ff9f0a; /* Couleur initiale */
+    border: none; /* Sans bordure */
+    color: #fff; /* Texte blanc */
 }
 
 .btn-warning:hover {
@@ -52,9 +137,9 @@
 
 /* Boutons des chiffres et de la virgule */
 .btn-secondary {
-    background-color: #2a2a2c; /* Couleur par défaut */
-    border: none;
-    color: #fff;
+    background-color: #2a2a2c; /* Couleur initiale */
+    border: none; /* Sans bordure */
+    color: #fff; /* Texte blanc */
 }
 
 .btn-secondary:hover {
@@ -65,11 +150,11 @@
     background-color: #727272; /* Couleur lorsqu'on appuie */
 }
 
-/* Autres boutons */
+/* Boutons spéciaux (C, √, %) */
 .btn-dark {
-    background-color: #5c5b60; /* Couleur par défaut */
-    border: none;
-    color: #fff;
+    background-color: #5c5b60; /* Couleur initiale */
+    border: none; /* Sans bordure */
+    color: #fff; /* Texte blanc */
 }
 
 .btn-dark:hover {
