@@ -64,13 +64,19 @@
 
     <!-- Barre latérale pour l'historique -->
     <div id="history-sidebar" class="history-sidebar">
-        <button id="close-history" class="btn btn-danger btn-sm position-absolute">X</button>
+        <!-- Bouton de fermeture -->
+        <button id="close-history" class="btn btn-danger position-absolute d-flex align-items-center justify-content-center">
+            <i class="bi bi-x-lg"></i> <!-- Icône de fermeture -->
+        </button>
+    
+        <!-- Titre de l'historique -->
         <h5 class="text-center mt-4">Historique</h5>
+    
+        <!-- Contenu de l'historique -->
         <div id="history-list" class="overflow-auto px-3" style="max-height: 400px;">
             <!-- Calculs sauvegardés ajoutés ici -->
         </div>
     </div>
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     
