@@ -97,31 +97,58 @@
     border: none;
 }
 
-/* Effet au survol (hover) */
+/* Effet au survol */
 .btn:hover {
     transform: scale(1.1);
 }
 
-/* Effet lorsque le bouton est cliqué (active) */
+/* Effet au clic */
 .btn:active {
     transform: scale(0.95);
     box-shadow: 0 2px 0 #000;
 }
 
+/* Boutons des chiffres et de la virgule */
+.btn-secondary {
+    background-color: #2a2a2c;
+    border: none;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #474444;
+}
+
+.btn-secondary:active {
+    background-color: #727272;
+}
+
 /* Boutons des opérations */
 .btn-warning {
     background-color: #ff9f0a;
+    border: none;
+    color: #fff;
 }
 
 .btn-warning:hover {
     background-color: #fca949;
 }
 
-/* Boutons des chiffres */
-.btn-secondary {
-    background-color: #2a2a2c;
+.btn-warning:active {
+    background-color: #fbc78d;
 }
 
-.btn-secondary:hover {
-    background-color: #474444;
+/* Boutons spéciaux */
+.btn-dark {
+    background-color: #5c5b60;
+    border: none;
+    color: #fff;
+}
+
+.btn-dark:hover {
+    background-color: #615c5c;
+}
+
+.btn-dark:active {
+    background-color: #8c8c8c;
 }
