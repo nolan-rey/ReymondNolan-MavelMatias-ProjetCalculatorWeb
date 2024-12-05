@@ -20,7 +20,7 @@
     box-shadow: 0 3px 0 #000;
 }
 
-/* Bouton pour ouvrir/fermer la barre latérale */
+/* Boutons pour ouvrir et fermer la barre latérale */
 #toggle-history,
 #close-history {
     position: absolute;
@@ -41,30 +41,29 @@
 #close-history:hover {
     background-color: #615c5c;
     cursor: pointer;
-    border: none;
 }
 
 /* Barre latérale pour l'historique */
 .history-sidebar {
-    position: absolute;
+    position: fixed;
     top: 0;
-    right: -300px;
+    right: -300px; 
     width: 300px;
-    height: 100%;
+    height: 100%; 
     background-color: #2a2a2c;
     color: white;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-    transition: right 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out; 
+    transform: translateX(100%); 
     z-index: 1000;
     padding-top: 20px;
-    overflow: hidden;
 }
 
 .history-sidebar.active {
-    right: 0;
+    transform: translateX(-300px);
 }
 
-/* Contenu de la barre latérale */
+/* Contenu de l'historique */
 .history-sidebar h5 {
     font-size: 1.5rem;
     margin: 20px 0;
@@ -80,11 +79,11 @@
     background-color: #3d3d3f;
     border-radius: 8px;
     max-height: calc(100% - 100px);
-    overflow-y: auto;
+    overflow-y: auto; 
     color: white;
 }
 
-/* Boutons généraux */
+/* Style général des boutons */
 .btn {
     border-radius: 50px;
     height: 80px;
@@ -94,50 +93,35 @@
     justify-content: center;
     transition: transform 0.2s ease, background-color 0.2s ease;
     margin: 5px;
-    box-shadow: 0 3px 0 #000;
+    box-shadow: 0 3px 0 #000; 
+    border: none;
+}
+
+/* Effet au survol (hover) */
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* Effet lorsque le bouton est cliqué (active) */
+.btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 0 #000;
 }
 
 /* Boutons des opérations */
 .btn-warning {
     background-color: #ff9f0a;
-    border: none;
-    color: #fff;
 }
 
 .btn-warning:hover {
     background-color: #fca949;
 }
 
-.btn-warning:active {
-    background-color: #fbc78d;
-}
-
-/* Boutons des chiffres et de la virgule */
+/* Boutons des chiffres */
 .btn-secondary {
     background-color: #2a2a2c;
-    border: none;
-    color: #fff;
 }
 
 .btn-secondary:hover {
     background-color: #474444;
-}
-
-.btn-secondary:active {
-    background-color: #727272;
-}
-
-/* Boutons spéciaux */
-.btn-dark {
-    background-color: #5c5b60;
-    border: none;
-    color: #fff;
-}
-
-.btn-dark:hover {
-    background-color: #615c5c;
-}
-
-.btn-dark:active {
-    background-color: #8c8c8c;
 }
