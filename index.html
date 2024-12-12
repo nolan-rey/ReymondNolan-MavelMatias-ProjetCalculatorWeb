@@ -41,7 +41,7 @@
                 <button class="col btn btn-dark btn-lg">C</button> <!-- Effacer tout -->
                 <button class="col btn btn-dark btn-lg">√</button> <!-- Racine carrée -->
                 <button class="col btn btn-dark btn-lg">%</button> <!-- Pourcentage -->
-                <button class="col btn btn-warning btn-lg">÷</button> <!-- Division -->
+                <button class="col btn btn-warning btn-lg">/</button> <!-- Division -->
             </div>
             
             <!-- Ligne des chiffres (7, 8, 9) et multiplication -->
@@ -49,7 +49,7 @@
                 <button class="col btn btn-secondary btn-lg">7</button>
                 <button class="col btn btn-secondary btn-lg">8</button>
                 <button class="col btn btn-secondary btn-lg">9</button>
-                <button class="col btn btn-warning btn-lg">×</button> <!-- Multiplication -->
+                <button class="col btn btn-warning btn-lg">*</button> <!-- Multiplication -->
             </div>
             
             <!-- Ligne des chiffres (4, 5, 6) et soustraction -->
@@ -57,7 +57,7 @@
                 <button class="col btn btn-secondary btn-lg">4</button>
                 <button class="col btn btn-secondary btn-lg">5</button>
                 <button class="col btn btn-secondary btn-lg">6</button>
-                <button class="col btn btn-warning btn-lg">−</button> <!-- Soustraction -->
+                <button class="col btn btn-warning btn-lg">-</button> <!-- Soustraction -->
             </div>
             
             <!-- Ligne des chiffres (1, 2, 3) et addition -->
@@ -79,21 +79,19 @@
 
     <!-- Barre latérale pour l'historique -->
     <!-- ID : history-sidebar -->
-    <!-- La barre latérale est cachée par défaut et s'affiche via JavaScript -->
+    <!-- Barre latérale pour l'historique -->
     <div id="history-sidebar" class="history-sidebar">
-        
-        <!-- Bouton pour fermer la barre latérale -->
-        <!-- ID : close-history -->
-        <button id="close-history" class="btn btn-danger btn-sm position-absolute">X</button>
-        
+        <!-- Bouton de fermeture -->
+        <button id="close-history" class="btn btn-danger position-absolute d-flex align-items-center justify-content-center">
+            <i class="bi bi-x-lg"></i> <!-- Icône de fermeture -->
+        </button>
+
         <!-- Titre de l'historique -->
         <h5 class="text-center mt-4">Historique</h5>
-        
-        <!-- Conteneur des calculs sauvegardés -->
-        <!-- ID : history-list -->
-        <!-- Les calculs sauvegardés seront ajoutés ici dynamiquement -->
+
+        <!-- Contenu de l'historique -->
         <div id="history-list" class="overflow-auto px-3" style="max-height: 400px;">
-            <!-- Exemple d'historique : "3 + 5 = 8" sera ajouté dynamiquement ici -->
+            <!-- Calculs sauvegardés ajoutés ici -->
         </div>
     </div>
 
