@@ -169,5 +169,12 @@
     #toggle-history {
         width: 30px;
         height: 30px;
+        position: absolute;
+        top: -45px;
+
+    }
+
+    .history-sidebar {
+        width: 100%;
     }
 }
